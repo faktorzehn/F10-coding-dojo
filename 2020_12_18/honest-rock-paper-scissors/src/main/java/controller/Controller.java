@@ -66,7 +66,7 @@ public class Controller {
 		}
 
 		if ((m1 == Move.ROCK && m2 == Move.SCISSORS) || (m1 == Move.PAPER && m2 == Move.ROCK)
-				|| (m1 == Move.PAPER && m2 == Move.ROCK)) {
+				|| (m1 == Move.SCISSORS && m2 == Move.PAPER)) {
 			return 2;
 		}
 
