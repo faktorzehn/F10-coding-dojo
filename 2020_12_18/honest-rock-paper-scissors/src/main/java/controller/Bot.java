@@ -9,8 +9,16 @@ public interface Bot {
 	public Move announce();
 
 	/**
-	 * Select the move you are actually going to play. The move your opponent announced is given as a parameter. 
+	 * Select the move you are actually going to play. The move your opponent
+	 * announced is given as a parameter.
 	 */
 	public Move play(Move enemyAnnouncement);
+
+	/**
+	 * What the enemy played, called after {@link play}
+	 */
+	public default void actual(Move enemyMove) {
+		// do nothing
+	}
 
 }

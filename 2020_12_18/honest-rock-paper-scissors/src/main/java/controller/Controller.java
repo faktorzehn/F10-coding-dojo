@@ -51,6 +51,9 @@ public class Controller {
 			boolean honest2 = choice2 == play2;
 			score1 += score(play1, play2) + (honest1 ? 1 : 0);
 			score2 += score(play2, play1) + (honest2 ? 1 : 0);
+
+			b1.actual(play2);
+			b2.actual(play1);
 		}
 
 		scores.put(b1.getClass(), score1);
