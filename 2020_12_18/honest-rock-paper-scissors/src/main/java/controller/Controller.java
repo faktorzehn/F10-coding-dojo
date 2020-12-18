@@ -15,11 +15,22 @@ import com.google.common.collect.Sets;
 
 import bots.RandomBot;
 import bots.RockBot;
+import bots.ScissorBot;
+import bots.SimpleHonestyBot;
+import bots.StatBot;
+import bots.StatBotRandom;
+import bots.StefanUndAmirsChampionBot;
+import bots.CheatBot;
+import bots.HonestLoserBot;
+import bots.McHammer;
+import bots.MirrorBot;
+import bots.OutsmartingBot;
 import bots.PaperBot;
 
 public class Controller {
 
-	static List<Class<? extends Bot>> bots = Arrays.asList(RandomBot.class, RockBot.class, PaperBot.class);
+	static List<Class<? extends Bot>> bots = Arrays.asList(CheatBot.class, HonestLoserBot.class, McHammer.class, MirrorBot.class, OutsmartingBot.class,  SimpleHonestyBot.class, StatBot.class, StatBotRandom.class, StefanUndAmirsChampionBot.class);
+//	static List<Class<? extends Bot>> bots = Arrays.asList(StefanUndAmirsChampionBot.class, McHammer.class);
 	static Map<Class<?>, Integer> scores = new HashMap<>();
 
 	public static void main(String[] args) {
