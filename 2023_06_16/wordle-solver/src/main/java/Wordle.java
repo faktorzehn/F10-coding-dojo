@@ -29,7 +29,7 @@ public class Wordle {
 			URL resource = Wordle.class.getResource(file);
 			List<String> lines = new ArrayList<>(Files.readAllLines(Paths.get(resource.toURI())));
 			Collections.shuffle(lines);
-			return lines;
+			return Collections.unmodifiableList(lines);
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to load " + file, e);
 		}
