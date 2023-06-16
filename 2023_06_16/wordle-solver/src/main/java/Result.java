@@ -61,6 +61,7 @@ public class Result {
 			}
 			builder.append(guess.charAt(i));
 		}
+		builder.append(ANSI_RESET);
 
 		return builder.toString();
 
