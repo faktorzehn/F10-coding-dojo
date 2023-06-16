@@ -9,11 +9,11 @@ public class Result {
 	private static final String ANSI_YELLOW_BACKGROUND = "\u001B[103m";
 
 	private final String guess;
-	
+
 	public Result(String guess) {
-		this.guess  = guess;
+		this.guess = guess;
 	}
-	
+
 	public boolean isLetterContained(int i) {
 		checkValidIndex(i);
 		return letterContained[i];
@@ -43,17 +43,17 @@ public class Result {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		for(int i = 0; i < 5; i++) {
-			if(isLetterCorrect(i)) {
+		for (int i = 0; i < 5; i++) {
+			if (isLetterCorrect(i)) {
 				builder.append(ANSI_GREEN_BACKGROUND);
-			} else if(isLetterContained(i)) {
+			} else if (isLetterContained(i)) {
 				builder.append(ANSI_YELLOW_BACKGROUND);
 			} else {
 				builder.append(ANSI_RESET);
-			}			
-			builder.append(guess.charAt(i));			
-		}		
-		
+			}
+			builder.append(guess.charAt(i));
+		}
+
 		return builder.toString();
 
 	}
