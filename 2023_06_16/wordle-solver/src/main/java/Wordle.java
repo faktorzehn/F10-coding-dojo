@@ -28,7 +28,7 @@ public class Wordle {
 		try {
 			URL resource = Wordle.class.getResource(file);
 			List<String> lines = new ArrayList<>(Files.readAllLines(Paths.get(resource.toURI())));
-			Collections.shuffle(lines, new Random(4042136355L));
+			Collections.shuffle(lines);
 			return lines;
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to load " + file, e);
