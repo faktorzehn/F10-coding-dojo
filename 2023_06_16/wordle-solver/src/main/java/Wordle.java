@@ -42,7 +42,6 @@ public class Wordle {
 			int count = letterCounts.computeIfAbsent((char) letter, c -> 0);
 			letterCounts.put((char) letter, count + 1);
 		});
-		System.out.println(letterCounts);
 
 		Result result = new Result(word);
 
@@ -57,7 +56,6 @@ public class Wordle {
 			}
 		}
 
-		System.out.println(letterCounts);
 		return result;
 	}
 
