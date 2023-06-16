@@ -33,8 +33,8 @@ public class Wordle {
 
 	public Result guess(String word) {
 		guesses++;
-		if (!POSSIBLE_ANSWERS.contains(word)) {
-			throw new IllegalArgumentException("Invalid word: " + word);
+		if (!VALID_GUESSES.contains(word)) {
+			throw new IllegalArgumentException("Invalid guess: " + word);
 		}
 
 		Map<Character, Integer> letterCounts = new HashMap<>();
