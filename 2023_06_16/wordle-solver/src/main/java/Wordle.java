@@ -1,6 +1,8 @@
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,9 @@ public class Wordle {
 	private static List<String> readLines(String file) {
 		try {
 			URL resource = Wordle.class.getResource(file);
-			return Files.readAllLines(Paths.get(resource.toURI()));
+			List<String> lines = new ArrayList<>(Files.readAllLines(Paths.get(resource.toURI())));
+			Collections.shuffle(lines, new Random(4042136355L));
+			return lines;
 		} catch (Exception e) {
 			throw new RuntimeException("Failed to load " + file, e);
 		}
