@@ -1,4 +1,3 @@
-
 public class Result {
 
 	private boolean[] letterContained = new boolean[5];
@@ -38,6 +37,15 @@ public class Result {
 		if (i < 0 || i > 4) {
 			throw new IllegalArgumentException("Invalid index: " + i);
 		}
+	}
+
+	public boolean isCorrect() {
+		for (boolean value : letterCorrect) {
+			if (!value) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override
