@@ -1,0 +1,50 @@
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    /*width: 100vw; !* Full viewport width *!*/
+    overflow: hidden; /* Prevents scrollbar */
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-row {
+    display: flex; /* Each row is a flex container */
+    justify-content: center; /* Center the boxes horizontally */
+    width: 100%; /* Ensure each row takes the full width */
+}
+
+.grid-cell {
+    width: 40px; /* Increase size as needed */
+    height: 40px; /* Increase size as needed */
+    border: 1px solid #ccc; /* Optional: add a border to each cell */
+    margin: 4px; /* Adjust margin to ensure cells fit well */
+}
+
+.grid-cell.ship {
+    background-color: #007bff; /* Change this color as needed */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-button {
+    width: 100px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin: 10px; /* Adds space around the buttons */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the focus outline */
+    /* Additional styling for appearance */
+    background-color:  #007bff;
+    color: white; /* Example text color */
+}
