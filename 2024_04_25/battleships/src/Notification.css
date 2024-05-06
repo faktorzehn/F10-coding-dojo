@@ -1,0 +1,37 @@
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #31d3d9; /* Red background */
+    color: white;
+    padding: 16px;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for elevation */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for entrance and exit */
+    opacity: 1; /* Initial opacity */
+    transform: translateY(0); /* Initial position */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align children to the left and right */
+    align-items: center; /* Center the content vertically */
+}
+
+/* Additional styles for entrance and exit animations */
+.notification-container.entering {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.notification-container.exiting {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 14px; /* Adjust size as needed */
+    cursor: pointer;
+    color: white; /* Make sure it's visible against the background */
+    padding: 0;
+    margin: 0;
+}
